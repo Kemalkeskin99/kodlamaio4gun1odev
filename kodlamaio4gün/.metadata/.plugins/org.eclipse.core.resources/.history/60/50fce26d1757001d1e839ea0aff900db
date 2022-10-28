@@ -1,0 +1,8 @@
+package Kodlama.io.Devs.Kodlama.io.Devs.core;
+
+import Kodlama.io.Devs.Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public interface IValidation {
+	boolean Valid(ProgrammingLanguage programmingLanguage);
+
+}

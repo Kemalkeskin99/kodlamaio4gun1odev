@@ -1,0 +1,25 @@
+package Kodlama.io.Devs.Kodlama.io.Devs.core;
+
+import Kodlama.io.Devs.Kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
+import Kodlama.io.Devs.Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public class Validation implements IValidation {
+	
+	private ProgrammingLanguageRepository programmingLanguageRepository;
+	
+
+	public Validation(ProgrammingLanguageRepository programmingLanguageRepository) {
+	
+		this.programmingLanguageRepository = programmingLanguageRepository;
+	}
+
+
+	@Override
+	public boolean Valid(ProgrammingLanguage programmingLanguage) {
+		if(programmingLanguage.getName().equals(programmingLanguageRepository.getClass().getName())) {
+			return true;
+		}
+		return false;
+	}
+
+}
