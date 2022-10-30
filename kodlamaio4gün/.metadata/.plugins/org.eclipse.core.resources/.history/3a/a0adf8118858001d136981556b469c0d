@@ -27,10 +27,10 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService {
 	public void add(ProgrammingLanguage programmingLanguage) {
 
 		if(isEmpty(programmingLanguage)) {
-			new ErrorSuccessResult(false,"Do not ignore the programming language");
+			new ErrorSuccessResult(false,"isim alanı boş.");
 			}
 			if(isExits(programmingLanguage)) {
-				new ErrorSuccessResult(false, "Programming language is available");
+				new ErrorSuccessResult(false, "Bu program dili zaten mevcuttur. Lütfen yeni dil giriniz.");
 			}
 			
 

@@ -2,7 +2,7 @@ INDEX VERSION 1.131+C:\Users\kemal\OneDrive\Masaüstü\kodlamaioodevleri\kodlamaio
 995927476.index
 1787087568.index
 2367052436.index
-3382160143.index
+3443170035.index
 192365399.index
 81906349.index
 2550736015.index
@@ -51,13 +51,12 @@ INDEX VERSION 1.131+C:\Users\kemal\OneDrive\Masaüstü\kodlamaioodevleri\kodlamaio
 792280867.index
 136205391.index
 2513380348.index
-3477936596.index
 611542511.index
 2044756199.index
 2754985061.index
 3729645963.index
-3725558735.index
 4123853532.index
+3725558735.index
 4214534591.index
 3805694333.index
 521739405.index
@@ -79,4 +78,4 @@ INDEX VERSION 1.131+C:\Users\kemal\OneDrive\Masaüstü\kodlamaioodevleri\kodlamaio
 3339901095.index
 427541789.index
 4272135967.index
-3443170035.index
+3382160143.index
