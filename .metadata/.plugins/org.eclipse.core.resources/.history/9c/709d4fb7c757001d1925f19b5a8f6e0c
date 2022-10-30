@@ -1,0 +1,14 @@
+package kodlama.io.rentACar.core.utilities.result;
+
+public class SuccesResult extends Result {
+
+	public SuccesResult(boolean success) {
+		super(true);
+		// TODO Auto-generated constructor stub
+	}
+	public SuccesResult(boolean success, String message) {
+		super(true, message);
+		// TODO Auto-generated constructor stub
+	}
+
+}

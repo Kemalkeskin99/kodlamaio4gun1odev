@@ -1,0 +1,26 @@
+package kodlama.io.rentACar.entities.concretes;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import kodlama.io.rentACar.entities.abstracts.Entity;
+
+@javax.persistence.Entity
+@Table(name="Cars")
+public class Car{
+	@Id
+	@GeneratedValue
+	@Column(name="car_id")
+	private int id;
+	@Column(name="car_name")
+	private String name;
+	@Column(name="brand_id")
+	private int brandId;
+	@Column(name="color_id")
+	private int colorId;
+	@Column(name="daily_price")
+	private int dailyPrice;
+
+}

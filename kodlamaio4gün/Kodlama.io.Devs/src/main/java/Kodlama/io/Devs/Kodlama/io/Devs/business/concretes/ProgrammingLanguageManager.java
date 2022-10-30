@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Kodlama.io.Devs.Kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+import Kodlama.io.Devs.Kodlama.io.Devs.core.utilities.Result.ErrorSuccessResult;
+import Kodlama.io.Devs.Kodlama.io.Devs.core.utilities.Result.SuccessResult;
 import Kodlama.io.Devs.Kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
 import Kodlama.io.Devs.Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
 
@@ -23,22 +25,22 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService {
 
 	@Override
 	public void add(ProgrammingLanguage programmingLanguage) {
-		try {
-			if(programmingLanguage.getName().isEmpty()){
-				System.out.println("dil adı kısmını boş bıraktınız!!!!");
+
+		if(isEmpty(programmingLanguage)) {
+			new ErrorSuccessResult(false,"isim alanı boş.");
 			}
-			for(ProgrammingLanguage language:this.programmingLanguageRepository.getAll()) {
-				if(language.getName().equals(programmingLanguage.getName())) {
-					throw new  Exception("lütfen program dili zaten mevcuttur lutfen başka dil yazınız ");
-					
-				}
+			if(isExits(programmingLanguage)) {
+				new ErrorSuccessResult(false, "Bu program dili zaten mevcuttur. Lütfen yeni dil giriniz.");
 			}
-			this.programmingLanguageRepository.add(programmingLanguage);
-		} catch (Exception exception) {
-			System.out.println(exception);
-		}
+			
+
+			programmingLanguageRepository.add(programmingLanguage);
+			new SuccessResult(true, "Dil kaydeildi");
+			
 
 	}
+
+	
 
 	@Override
 	public void delete(ProgrammingLanguage programmingLanguage) {
@@ -56,6 +58,20 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService {
 	public ProgrammingLanguage getId(int id) {
 
 		return this.programmingLanguageRepository.getId(id);
+	}
+	private boolean isExits(ProgrammingLanguage programmingLanguage) {
+		
+		for(ProgrammingLanguage language:this.getAll()) {
+			if(programmingLanguage.getName().equals(language.getName())) {
+			return true;
+			}
+		}
+		
+		return false;
+	}
+	private boolean isEmpty(ProgrammingLanguage programmingLanguage) {
+		
+		return programmingLanguage.getName().isEmpty();
 	}
 
 }

@@ -1,0 +1,8 @@
+package kodlama.io.rentACar.entities.concretes;
+
+public class Color {
+	private int colorId;
+	private String name;
+	
+
+}

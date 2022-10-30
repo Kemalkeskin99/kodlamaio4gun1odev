@@ -1,0 +1,5 @@
+package kodlama.io.rentACar.core.utilities.result;
+
+public class SuccesResult {
+
+}

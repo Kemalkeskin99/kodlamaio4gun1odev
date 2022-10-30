@@ -1,0 +1,23 @@
+package Kodlama.io.Devs.Kodlama.io.Devs.core.utilities.Result;
+
+public class Result {
+	
+	boolean success;
+	String message;
+	public Result(boolean success) {
+		this.success = success;
+	}
+	
+	public Result(boolean success, String message) {
+		this(success);
+		this.message = message;
+	}
+		
+	public Boolean isSuccess() {
+			return success=success;
+	}
+	public String getMessage() {
+		return message=message;
+}
+
+}

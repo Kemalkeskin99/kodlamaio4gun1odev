@@ -1,0 +1,5 @@
+package Kodlama.io.Devs.Kodlama.io.Devs.core.utilities.Result;
+
+public class SuccessResult {
+
+}

@@ -1,0 +1,14 @@
+package Kodlama.io.Devs.Kodlama.io.Devs.core.utilities.Result;
+
+public class SuccessResult extends Result {
+
+	public SuccessResult() {
+		super(true);
+	
+	}
+	public SuccessResult(boolean success, String message) {
+		super(true, message);
+		
+	}
+
+}

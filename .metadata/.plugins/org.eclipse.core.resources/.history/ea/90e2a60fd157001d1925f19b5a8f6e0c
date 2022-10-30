@@ -1,0 +1,47 @@
+package kodlama.io.rentACar.entities.concretes;
+
+import org.hibernate.annotations.Table;
+
+import java.lang.annotation.Annotation;
+
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Entity
+@Table(appliesTo = "brands")
+public class Brand {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "brand_id")
+	private int brandId;
+	@Column(name = "brand_name")
+	private String name;
+
+	public Brand() {
+
+	}
+
+	public Brand(int brandId, String name) {
+		this.brandId = brandId;
+		this.name = name;
+	}
+
+	public int getBrandId() {
+		return brandId;
+	}
+
+	public void setBrandId(int brandId) {
+		this.brandId = brandId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

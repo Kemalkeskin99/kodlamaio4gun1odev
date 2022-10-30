@@ -1,0 +1,13 @@
+package kodlama.io.rentACar.core.utilities.result;
+
+public class ErrorSuccessResult extends Result{
+	public ErrorSuccessResult(boolean success) {
+		super(false);
+		
+	}
+	public ErrorSuccessResult(boolean success, String message) {
+		super(false, message);
+		
+	}
+}
+	

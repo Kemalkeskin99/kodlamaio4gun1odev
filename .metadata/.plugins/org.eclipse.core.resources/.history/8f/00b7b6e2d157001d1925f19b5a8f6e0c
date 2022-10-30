@@ -1,0 +1,13 @@
+package kodlama.io.rentACar.entities.concretes;
+
+import kodlama.io.rentACar.entities.abstracts.Entity;
+
+public class Car implements Entity{
+	
+	private int id;
+	private String name;
+	private int brandId;
+	private int colorId;
+	private int dailyPrice;
+
+}
